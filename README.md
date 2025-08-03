@@ -7,34 +7,47 @@ A modular, scalable end-to-end UI test automation framework built using [Playwri
 ## 📁 Folder Structure
 
 ```
-saucedemo-playwright/
-├── pages/         # Page classes with locators and actions
-├── tests/         # Test specs organized by features
-├── utils/         # Custom commands, test data, and helpers
+mcp/
+├── pages/
+│   ├── actions/      # Page action classes
+│   │   ├── CartActions.js
+│   │   ├── LoginActions.js
+│   │   └── ProductsActions.js
+│   └── locators/     # Page element locators
+│       ├── CartLocators.js
+│       ├── LoginLocators.js
+│       └── ProductsLocators.js
+├── tests/           # Test specs organized by features
+│   └── cart.spec.js
+├── utils/           # Helper functions and test data
+│   ├── helpers.js
+│   └── testData.js
+├── mcp.json         # MCP configuration
 ├── playwright.config.js
-├── package.json
+├── script.js
+└── package.json
 ```
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Automation Tool:** Playwright
+- **Automation Tool:** Playwright with Model Context Protocol (MCP)
 - **Language:** JavaScript (Node.js)
-- **CI/CD:** GitHub Actions
-- **Version Control:** Git, GitHub
+- **Version Control:** Git
 - **Architecture:** Page Object Model (POM)
+- **Testing Framework:** Playwright Test
 
 ---
 
 ## 🚀 Key Features
 
-- Reusable and scalable POM-based test structure
-- Randomized login with dynamic user selection
-- Organized locators, actions, and test logic
-- Cross-browser testing (Chromium, Firefox, WebKit)
-- GitHub Actions workflow for automated execution
-- Clean separation of concerns for better maintainability
+- Model Context Protocol (MCP) integration for enhanced test automation
+- Reusable and scalable Page Object Model architecture
+- Clean separation of locators and actions
+- Modular test structure with organized test specs
+- Built-in utilities and test data management
+- Cross-browser testing support via Playwright
 
 ---
 
@@ -42,8 +55,8 @@ saucedemo-playwright/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/saucedemo-playwright.git
-cd saucedemo-playwright
+git clone https://github.com/taqirazaj/PlaywrightMCP.git
+
 
 # Install project dependencies
 npm install
